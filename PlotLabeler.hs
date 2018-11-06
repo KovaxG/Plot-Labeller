@@ -127,7 +127,7 @@ distance :: (Float, Float) -> (Float, Float) -> Float
 distance (x1, y1) (x2, y2) = sqrt $ (x1 - x2)^2 + (y1 - y2)^2
 
 infoToOutput :: State -> String
-infoToOutput = unlines . map (\(v, l) -> show v ++ "," ++ show l) . map snd . info
+infoToOutput = unlines . map (\(v, l) -> show l) . map snd . info
 
 addcount :: Float -> Float -> Float
 addcount p a = a + a * p
